@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mi Portafolio / Josian Rafael</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <style>
+    .portfolio-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+    .portfolio-card {
+        background-color: #1e1e1e;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    .portfolio-card:hover {
+        transform: translateY(-5px);
+    }
+    .portfolio-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .portfolio-content {
+        padding: 20px;
+    }
+    .portfolio-title {
+        font-size: 24px;
+        margin: 0 0 10px;
+        color: #ffffff;
+    }
+    .portfolio-description {
+        font-size: 14px;
+        color: #b0b0b0;
+        margin-bottom: 20px;
+    }
+    .portfolio-tools {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .tool-icon {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+    }
+    .portfolio-link {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ffffff;
+        color: #121212;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+    .portfolio-link:hover {
+        background-color: #e0e0e0;
+    }
+
+    .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .services-title {
+            text-align: center;
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .service-card {
+            background-color: #1e1e1e;
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+        }
+        .service-icon {
+            font-size: 4em;
+            margin-bottom: 25px;
+        }
+        .service-title {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #f0f0f0;
+        }
+        .service-description {
+            font-size: 1em;
+            line-height: 1.2;
+            color: #b0b0b0;
+        }
+</style>
+
+  <!-- =======================================================
+    Theme Name: Mi Portafolio
+    Author: Josian Rafael
+  ======================================================= -->
+</head>
+
+
+<body id="page-top">
+
+  <!--/ Nav Star /-->
+  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll" href="#page-top">Mi Portafolio</a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#about">Sobre mí</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#service">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#work">Proyectos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--/ Nav End /-->
+
+  <!--/ Intro Skew Star /-->
+  <div id="home" class="intro route bg-image" style="background-image: url('img/FormalFoto3.jpg'); background-position: center 30%;">
+
+    <div class="overlay-itro"></div>
+    <div class="intro-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <!--<p class="display-6 color-d">Hello, world!</p>-->
+          <h1 class="intro-title mb-4">I am Josian Rafael</h1>
+          <p class="intro-subtitle"><span class="text-slider-items">Web Developer,Web Designer,Frontend and Backend Developer</span><strong class="text-slider"></strong></p>
+          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Intro Skew End /-->
+
+  <section id="about" class="about-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="box-shadow-full">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-sm-6 col-md-5">
+                    <div class="about-img">
+                      <img src="img/FormalFoto.jpg" class="img-fluid rounded b-shadow-a" alt="">
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-7">
+                    <div class="about-info">
+                      <p><span class="title-s">Name: </span> <span>Josian Rafael Viñas</span></p>
+                      <p><span class="title-s">Profile: </span> <span>full stack developer, Web Designer</span></p>
+                      <p><span class="title-s">Email: </span> <span>JosianRafael855@gmail.com</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-mf">
+                  <p class="title-s">Skill</p>
+                  <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+                    <img src="img/html-icono.png" alt="HTML Icon" style="width: 50px; height: 50px;">
+                    <img src="img/css-icon-png-0.jpg" alt="CSS Icon" style="width: 50px; height: 50px;">
+                    <img src="img/Js-icono.png" alt="PHP Icon" style="width: 50px; height: 50px;">
+                    <img src="img/Php-icono.png" alt="JavaScript Icon" style="width: 50px; height: 50px;">
+                    <img src="img/c-icono.png" alt="JavaScript Icon" style="width: 50px; height: 50px;">
+                    <img src="img/git-icono.png" alt="JavaScript Icon" style="width: 50px; height: 50px;">
+                    <img src="img/github-icono.png" alt="JavaScript Icon" style="width: 50px; height: 50px;">
+                    <img src="img/astro-icono.png" alt="JavaScript Icon" style="width: 50px; height: 50px;">
+                    <img src="img/React-icono.png" alt="JavaScript Icon" style="width: 50px; height: 50px;">
+                    <img src="img/nodejs-icono.png" alt="JavaScript Icon" style="width: 50px; height: 50px;">
+                    <img src="img/Py-icono.webp" alt="JavaScript Icon" style="width: 50px; height: 50px;">
+                    <img src="img/Tailwind-icono.png" alt="JavaScript Icon" style="width: 50px; height: 50px;">
+                    <img src="img/Boots-icono.png" alt="JavaScript Icon" style="width: 50px; height: 50px;">
+                    <img src="img/photoshop-icono.png" alt="JavaScript Icon" style="width: 50px; height: 50px;">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="about-me pt-4 pt-md-0">
+                  <div class="title-box-2">
+                    <h5 class="title-left">
+                      Sobre mí
+                    </h5>
+                  </div>
+                  <p class="lead">
+                    Soy Josian Rafael Viñas, un desarrollador full stack apasionado por la creación de soluciones digitales innovadoras y personalizadas. Con una sólida experiencia en el diseño y desarrollo web, disfruto enfrentar nuevos retos tecnológicos y aprender continuamente en este emocionante campo.
+                  </p>
+                  <p class="lead">
+                    Valoro la simplicidad y la estética en el desarrollo, asegurándome de que cada proyecto sea no solo funcional, sino también visualmente atractivo y fácil de usar.
+                  </p>
+                  <p class="lead">
+                    Estoy en constante búsqueda de nuevas tecnologías para implementar en mis proyectos, desde frameworks modernos hasta técnicas avanzadas de diseño responsivo.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!--/ Section Services Star /-->
+  <section id="service" class="services-mf route">
+    <div class="services-container">
+      <h2 style="color: black;" class="services-title">Mis Servicios</h2>
+      <div class="line-mf"></div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="services-grid">
+          <div class="service-card">
+              <div class="service-icon">🎨</div>
+              <h3 class="service-title">Diseño Web</h3>
+              <p class="service-description">Creo diseños web cautivadores que reflejan la esencia de tu marca. Mi enfoque combina una estética visual atractiva con una experiencia de usuario intuitiva. Me aseguro de que tu sitio no solo se vea increíble, sino que también conecte eficazmente con tu audiencia, impulsando el engagement y las conversiones.</p>
+          </div>
+          <div class="service-card">
+              <div class="service-icon">💻</div>
+              <h3 class="service-title">Desarrollo Web</h3>
+              <p class="service-description">Construyo sitios web y aplicaciones robustas utilizando las últimas tecnologías. Ya sea que necesites una landing page impactante o una compleja plataforma de e-commerce, puedo transformar tus ideas en soluciones digitales potentes y escalables. Mi experiencia abarca desde el front-end hasta el back-end, garantizando un producto final de alta calidad.</p>
+          </div>
+          <div class="service-card">
+              <div class="service-icon">📱</div>
+              <h3 class="service-title">Diseño Responsivo</h3>
+              <p class="service-description">Garantizo que tu sitio web se vea y funcione perfectamente en todos los dispositivos. Mi enfoque de diseño responsivo asegura una experiencia de usuario consistente y atractiva, ya sea en un smartphone, tablet o computadora de escritorio. Optimizo cada elemento para ofrecer la mejor experiencia posible, independientemente del tamaño de la pantalla.</p>
+          </div>
+      </div>
+  </div>
+  </section>
+  <!--/ Section Services End /-->
+
+  <div class="title-box text-center">
+    <h3 class="title-a">
+      Proyectos
+    </h3>
+    <div class="line-mf"></div>
+  </div>
+
+  <section id="work" class="portfolio-section">
+    <div class="portfolio-grid">
+        <div class="portfolio-card">
+            <img src="img/Programa1.jpg" alt="Proyecto 1" class="portfolio-image">
+            <div class="portfolio-content">
+                <h3 class="portfolio-title">Explora tu mundo!</h3>
+                <p class="portfolio-description"> <strong>(Plantilla con Astro)</strong>. Explora Tu Mundo es una página diseñada para ofrecer una experiencia única de aprendizaje y entretenimiento. Aquí podrás sumergirte en una amplia variedad de temas, desde el fascinante mundo de la programación y las tendencias en música, hasta las finanzas digitales y las noticias más relevantes a nivel global. ¡Descubre, aprende y diviértete en un solo lugar!</p>
+                <div class="portfolio-tools">
+                    <img src="img/html-icono.png" alt="HTML" class="tool-icon">
+                    <img src="img/css-icon-png-0.jpg" alt="CSS" class="tool-icon">
+                    <img src="img/Js-icono.png" alt="JavaScript" class="tool-icon">
+                    <img src="img/React-icono.png" alt="JavaScript" class="tool-icon">
+                    <img src="img/astro-icono.png" alt="JavaScript" class="tool-icon">
+                    <img src="img/Tailwind-icono.png" alt="JavaScript" class="tool-icon">
+                </div>
+                <a href="https://musical-gecko-d860c2.netlify.app/" class="portfolio-link">Ver proyecto</a>
+            </div>
+        </div>
+        <div class="portfolio-card">
+            <img src="img/Programa2.jpg" alt="Proyecto 2" class="portfolio-image">
+            <div class="portfolio-content">
+                <h3 class="portfolio-title">GoogleVs</h3>
+                <p class="portfolio-description">GoogleVs es una página interactiva que te permite explorar la evolución de las interfaces de Google a lo largo de los años. Descubre cómo han cambiado sus diseños y estilos, navegando de versión en versión para revivir la historia de uno de los gigantes tecnológicos más importantes del mundo.</p>
+                <div class="portfolio-tools">
+                    <img src="img/html-icono.png" alt="React" class="tool-icon">
+                    <img src="img/css-icon-png-0.jpg" alt="Node.js" class="tool-icon">
+                    <img src="img/Tailwind-icono.png" alt="MongoDB" class="tool-icon">
+                    <img src="img/React-icono.png" alt="MongoDB" class="tool-icon">
+                    <img src="img/astro-icono.png" alt="MongoDB" class="tool-icon">
+                    <img src="img/Js-icono.png" alt="MongoDB" class="tool-icon">
+                </div>
+                <a href="#" class="portfolio-link">Ver proyecto</a>
+            </div>
+        </div>
+        <div class="portfolio-card">
+            <img src="img/Programa3.jpg" alt="Proyecto 3" class="portfolio-image">
+            <div class="portfolio-content">
+                <h3 class="portfolio-title">E-commerce</h3>
+                <p class="portfolio-description">Es un e-commerce de ropa donde encontrarás las últimas tendencias para todos los estilos. Explora nuestro catálogo, añade tus prendas favoritas al carrito y disfruta de una experiencia de compra fácil y personalizada. ¡Renueva tu guardarropa con solo unos clics!</p>
+                <div class="portfolio-tools">
+                    <img src="img/html-icono.png" alt="Vue.js" class="tool-icon">
+                    <img src="img/css-icon-png-0.jpg" alt="Firebase" class="tool-icon">
+                    <img src="img/Js-icono.png" alt="Sass" class="tool-icon">
+                </div>
+                <a href="https://josianrafael.github.io/TiendaDeProductos/" class="portfolio-link">Ver proyecto</a>
+            </div>
+        </div>
+        <div class="portfolio-card">
+          <img src="img/Programa4.jpg" alt="Proyecto 3" class="portfolio-image">
+          <div class="portfolio-content">
+              <h3 class="portfolio-title">New To do List</h3>
+              <p class="portfolio-description">New To-Do List es una página diseñada para gestionar tus tareas de manera eficiente y con estilo. Con una interfaz moderna, atractiva y profesional, puedes agregar nuevas tareas, marcarlas como completadas, eliminarlas y mantener tu lista siempre organizada. Disfruta de un espacio dedicado exclusivamente a tu lista de pendientes, optimizando tu productividad con una experiencia visual única.</p>
+              <div class="portfolio-tools">
+                  <img src="img/html-icono.png" alt="Vue.js" class="tool-icon">
+                  <img src="img/css-icon-png-0.jpg" alt="Firebase" class="tool-icon">
+                  <img src="img/Js-icono.png" alt="Sass" class="tool-icon">
+                  <img src="img/Tailwind-icono.png" alt="Sass" class="tool-icon">
+              </div>
+              <a href="https://josianrafael.github.io/NewToDoList/" class="portfolio-link">Ver proyecto</a>
+          </div>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+            <img src="img/nexacode.jpg" alt="Proyecto 1" class="portfolio-image">
+            <div class="portfolio-content">
+                <h3 class="portfolio-title">NexaCode Group</h3>
+                <p class="portfolio-description"> NexaCode Group es un emprendimiento dedicado a ofrecer servicios de desarrollo web a bajo costo, facilitando a pequeñas empresas y emprendedores la creación de su presencia en línea. La empresa se especializa en diseñar y vender páginas web accesibles y funcionales, permitiendo que más personas accedan a la tecnología y fortalezcan su marca digital. Además, NexaCode Group se distingue por ofrecer cursos gratuitos de programación en varios lenguajes, promoviendo la educación y el aprendizaje en el ámbito tecnológico. Con un enfoque en la accesibilidad y la capacitación, NexaCode Group busca empoderar a individuos y empresas en su camino hacia el éxito digital.</p>
+                <div class="portfolio-tools">
+                    <img src="img/html-icono.png" alt="HTML" class="tool-icon">
+                    <img src="img/css-icon-png-0.jpg" alt="CSS" class="tool-icon">
+                    <img src="img/Js-icono.png" alt="JavaScript" class="tool-icon">
+                    <img src="img/Tailwind-icono.png" alt="JavaScript" class="tool-icon">
+                </div>
+                <a href="https://josianrafael.github.io/NexaCode-Group-/" class="portfolio-link">Ver proyecto</a>
+            </div>
+        </div>
+      </div>
+      <div class="portfolio-card">
+        <img src="img/Programa5.jpg" alt="Proyecto 3" class="portfolio-image">
+        <div class="portfolio-content">
+            <h3 class="portfolio-title">Proyecto Nasa API</h3>
+            <p class="portfolio-description">Proyecto NASA API es una página interactiva que utiliza la API de la NASA para ofrecerte información fascinante sobre el universo. Descubre datos en tiempo real sobre meteoritos, objetos cercanos a la Tierra, la fotografía del día y mucho más. Sumérgete en el conocimiento espacial con un diseño intuitivo y contenido siempre actualizado.</p>
+            <div class="portfolio-tools">
+                <img src="img/html-icono.png" alt="Vue.js" class="tool-icon">
+                <img src="img/css-icon-png-0.jpg" alt="Firebase" class="tool-icon">
+                <img src="img/Js-icono.png" alt="Sass" class="tool-icon">
+                <img src="img/astro-icono.png" alt="Sass" class="tool-icon">
+                <img src="img/Tailwind-icono.png" alt="Sass" class="tool-icon">
+                <img src="img/Boots-icono.png" alt="Sass" class="tool-icon">
+            </div>
+            <a href="#" class="portfolio-link">Ver proyecto</a>
+        </div>
+    </div>
+    <div class="portfolio-card">
+      <img src="img/Programa6.jpg" alt="Proyecto 3" class="portfolio-image">
+      <div class="portfolio-content">
+          <h3 class="portfolio-title">Plantilla Empresa</h3>
+          <p class="portfolio-description">Es una solución profesional diseñada para empresas que buscan destacar con una presencia en línea moderna y efectiva. Incluye secciones clave como servicios, sobre nosotros, portafolio, contacto y mucho más, todo en un diseño limpio y adaptable. Personaliza fácilmente esta plantilla para reflejar la identidad de tu empresa y conecta con tus clientes de manera profesional y atractiva.</p>
+          <div class="portfolio-tools">
+              <img src="img/html-icono.png" alt="Vue.js" class="tool-icon">
+              <img src="img/css-icon-png-0.jpg" alt="Firebase" class="tool-icon">
+              <img src="img/Tailwind-icono.png" alt="Sass" class="tool-icon">
+              <img src="img/Js-icono.png" alt="Sass" class="tool-icon">
+              <img src="img/astro-icono.png" alt="Sass" class="tool-icon">
+          </div>
+          <a href="#" class="portfolio-link">Ver proyecto</a>
+      </div>
+  </div>
+  <div class="portfolio-card">
+    <img src="img/Programa7.jpg" alt="Proyecto 3" class="portfolio-image">
+    <div class="portfolio-content">
+        <h3 class="portfolio-title">Calculadora</h3>
+        <p class="portfolio-description">Es una herramienta sencilla y funcional diseñada para realizar cálculos cotidianos con facilidad. Con una interfaz intuitiva, puedes realizar operaciones como suma, resta, multiplicación y división de forma rápida y eficiente. Ideal para estudiantes, profesionales o cualquier persona que necesite una solución práctica para sus cálculos diarios.</p>
+        <div class="portfolio-tools">
+            <img src="img/html-icono.png" alt="Vue.js" class="tool-icon">
+            <img src="img/css-icon-png-0.jpg" alt="Firebase" class="tool-icon">
+            <img src="img/Js-icono.png" alt="Sass" class="tool-icon">
+        </div>
+        <a href="https://josianrafael.github.io/CalculadoraBasica/" class="portfolio-link">Ver proyecto</a>
+    </div>
+</div>
+<div class="portfolio-card">
+  <img src="img/Programa10.jpg" alt="Proyecto 3" class="portfolio-image">
+  <div class="portfolio-content">
+      <h3 class="portfolio-title">Level up Store</h3>
+      <p class="portfolio-description">Level Up Store es una tienda de alquiler de videojuegos que te ofrece la oportunidad de disfrutar de tus juegos favoritos de manera flexible y conveniente. Aquí podrás alquilar videojuegos por fechas, devolverlos y acceder a toda la información sobre cada título disponible. La página cuenta con características interactivas, como juegos de quiz, que mejoran tu experiencia. Como cliente, podrás navegar fácilmente a través de la plataforma, mientras que el administrador gestiona y supervisa el funcionamiento de la tienda. <strong>(GitHub Code)</strong> </p>
+      <div class="portfolio-tools">
+          <img src="img/html-icono.png" alt="Vue.js" class="tool-icon">
+          <img src="img/css-icon-png-0.jpg" alt="Firebase" class="tool-icon">
+          <img src="img/Js-icono.png" alt="Sass" class="tool-icon">
+          <img src="img/Tailwind-icono.png" alt="Sass" class="tool-icon">
+          <img src="img/Boots-icono.png" alt="Sass" class="tool-icon">
+          <img src="img/Php-icono.png" alt="Sass" class="tool-icon">
+          <img src="img/sql-icono.png" alt="Sass" class="tool-icon">
+      </div>
+      <a href="https://github.com/JosianRafael/Level-Up-Store" class="portfolio-link">Ver proyecto</a>
+  </div>
+</div>
+<div class="portfolio-card">
+  <img src="img/Programa11.jpg" alt="Proyecto 3" class="portfolio-image">
+  <div class="portfolio-content">
+      <h3 class="portfolio-title">New To do List V2 JF</h3>
+      <p class="portfolio-description">New To-Do List V2 JF es una página diseñada para gestionar tus tareas de manera eficiente y con estilo. Esta nueva versión está trabajada con una base de datos SQL, lo que permite que toda la información y la interactividad se guarden de forma segura y accesible. Con una interfaz moderna, atractiva y profesional, puedes agregar nuevas tareas, marcarlas como completadas, eliminarlas y mantener tu lista siempre organizada. Disfruta de un espacio dedicado exclusivamente a tus pendientes, optimizando tu productividad con una experiencia visual única y funcional. <strong>(GitHub Code)</strong></p>
+      <div class="portfolio-tools">
+          <img src="img/html-icono.png" alt="Vue.js" class="tool-icon">
+          <img src="img/css-icon-png-0.jpg" alt="Firebase" class="tool-icon">
+          <img src="img/Js-icono.png" alt="Sass" class="tool-icon">
+          <img src="img/Tailwind-icono.png" alt="Sass" class="tool-icon">
+          <img src="img/Php-icono.png" alt="Sass" class="tool-icon">
+          <img src="img/sql-icono.png" alt="Sass" class="tool-icon">
+      </div>
+      <a href="https://github.com/JosianRafael/New-To-Do-List-V2-JF" class="portfolio-link">Ver proyecto</a>
+  </div>
+</div>
+<div class="portfolio-card">
+  <img src="img/Programa15.jpg" alt="Proyecto 3" class="portfolio-image">
+  <div class="portfolio-content">
+      <h3 class="portfolio-title">Necesito Delivery</h3>
+      <p class="portfolio-description">Necesito Delivery es una página diseñada para ofrecerte una amplia gama de servicios de entrega de manera rápida y confiable. Creada para una empresa real, esta plataforma te permite solicitar entregas de comida, documentos, pagos de servicios del hogar y mucho más, todo en un solo lugar. Con un diseño intuitivo y fácil de usar, podrás realizar tus pedidos con solo unos clics y disfrutar de la comodidad que brinda el servicio a domicilio. ¡Experimenta la eficiencia y versatilidad de Necesito Delivery y simplifica tu vida diaria!</p>
+      <div class="portfolio-tools">
+          <img src="img/html-icono.png" alt="Vue.js" class="tool-icon">
+          <img src="img/css-icon-png-0.jpg" alt="Firebase" class="tool-icon">
+          <img src="img/Tailwind-icono.png" alt="Sass" class="tool-icon">
+          <img src="img/Js-icono.png" alt="Sass" class="tool-icon">
+      </div>
+      <a href="https://necesitodelivery.com/" class="portfolio-link">Ver proyecto</a>
+  </div>
+</div>
+    </div>
+</section>
+
+  <!--/ Section Contact-Footer Star /-->
+  <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(https://static.vecteezy.com/system/resources/previews/001/225/154/original/black-low-poly-geometric-background-vector.jpg)">
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="contact-mf">
+            <div id="contact" class="box-shadow-full">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="title-box-2">
+                    <h5 class="title-left">
+                      Enviar mensaje a mi.
+                    </h5>
+                  </div>
+                  <div>
+                      <form action="" method="post" role="form" class="contactForm">
+                      <div id="sendmessage">Tu mensaje Ha sido enviado. Muchas Gracias!</div>
+                      <div id="errormessage"></div>
+                      <div class="row">
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Tu nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Tu email" data-rule="email" data-msg="Please enter a valid email" />
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                              <div class="validation"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Deja tu mensaje"></textarea>
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <button type="submit" class="button button-a button-big button-rouded">Enviar Mensaje</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="title-box-2 pt-4 pt-md-0">
+                    <h5 class="title-left">
+                      Ponte en contacto.
+                    </h5>
+                  </div>
+                  <div class="more-info">
+                    <p class="lead">
+                      Ponte en contacto conmigo para cualquier pregunta, comentario o asistencia que necesites. Estoy aquí para ayudarte y asegurarme de que tu experiencia sea lo más satisfactoria posible. ¡Espero saber de ti pronto!
+                    </p>
+                    <ul class="list-ico">
+                      <li><span class="ion-user"></span> Josian Rafael Viñas</li>
+                      <li><span class="ion-email"></span> JosianRafael855@gmail.com</li>
+                    </ul>
+                  </div>
+                  <div class="socials">
+                    <ul>
+                      <li><a href="https://www.instagram.com/josian_rafael/profilecard/?igsh=MXMxMm9yOWVqb2ppdw=="><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="copyright-box">
+              <p class="copyright">&copy; Copyright <strong>Josian Rafael</strong>.</p>
+              <div class="credits">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <script>
+    document.querySelector('.contactForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevenir el envío del formulario
+  
+      // Obtener los valores de los inputs
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.querySelector('textarea[name="message"]').value;
+  
+      // Formatear el mensaje para WhatsApp
+      const formattedMessage = `
+        *📩 Nuevo Mensaje de Contacto:*
+        *Nombre:* ${name}
+        *Email:* ${email}
+        *Asunto:* ${subject}
+        *Mensaje:* ${message}
+        
+        *¡Gracias por contactarme! Estoy aquí para ayudarte.* 🌟
+      `.trim().replace(/\n/g, '%0A'); // Reemplazar saltos de línea por %0A para el enlace
+  
+      // Crear el enlace de WhatsApp
+      const phoneNumber = '8293943239'; // Cambia esto por tu número de WhatsApp (sin + ni espacios)
+      const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(formattedMessage)}`;
+  
+      // Redirigir al usuario al enlace de WhatsApp
+      window.open(whatsappLink, '_blank');
+  
+      // Mostrar una alerta de éxito
+      Swal.fire({
+        icon: 'success',
+        title: '¡Mensaje enviado!',
+        text: `Tu mensaje ha sido enviado a Josian Rafael con éxito.`,
+        confirmButtonText: 'Aceptar'
+      });
+  
+      // Opcional: Mostrar un mensaje de confirmación en el DOM
+      document.getElementById('sendmessage').style.display = 'block';
+      setTimeout(() => {
+        document.getElementById('sendmessage').style.display = 'none';
+      }, 5000); // Mensaje visible por 5 segundos
+    });
+  </script>
+  
+  
+  
+
+
+
+
+  <!--/ Section Contact-footer End /-->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <div id="preloader"></div>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/popper/popper.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/counterup/jquery.waypoints.min.js"></script>
+  <script src="lib/counterup/jquery.counterup.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/typed/typed.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
