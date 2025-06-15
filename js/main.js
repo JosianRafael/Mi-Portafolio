@@ -94,10 +94,10 @@
     var typed_strings = $('.text-slider-items').text();
 		var typed = new Typed('.text-slider', {
 			strings: typed_strings.split(','),
-			typeSpeed: 40,
+			typeSpeed: 30,
 			loop: true,
-			backDelay: 1100,
-			backSpeed: 10
+			backDelay: 1000,
+			backSpeed: 4
 		});
 	}
 
